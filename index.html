@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Board Game Finder</title>
+    <!-- Include AlaSQL from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alasql@4"></script>
+    <style>
+        body { font-family: sans-serif; margin: 40px; background: #f9f9f9; }
+        .filters { display: flex; gap: 15px; margin-bottom: 20px; }
+        input, select { padding: 8px; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #333; color: white; }
+        .game-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ensures the image fills the square nicely without distortion */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    display: block;
+
+    .complexity-low {
+    color: #2e7d32; /* Green */
+    font-weight: bold;
+}
+
+.complexity-high {
+    color: #c62828; /* Red */
+    font-weight: bold;
+}
+}
+    </style>
+</head>
+<body>
+    <a href="index2.html">index2.html</a>
+    <h2>Board Game Collection Search</h2>
+    
+    <div class="filters">
+        <input type="text" id="searchName" placeholder="Search game..." onkeyup="filterGames()">
+        <input type="number" id="playerCount" placeholder="Players count" min="1" onchange="filterGames()">
+        
+        <!-- NEW: Complexity Operator and Value Inputs -->
+    <select id="complexityOp" onchange="filterGames()">
+        <option value=">=">Complexity &ge;</option>
+        <option value="<=" selected>Complexity &le;</option> <!-- default to less than or equal -->
+        <option value="=">Complexity =</option>
+        <option value="<">Complexity &lt;</option>
+        <option value=">">Complexity &gt;</option>
+    </select>
+    <input type="number" id="complexityValue" placeholder="e.g. 2.5" step="0.1" min="0" max="5" onchange="filterGames()" style="width: 100px;">
+        
+        <select id="filterOwner" onchange="filterGames()">
+            <option value="">All Owners</option>
+            <option value="ambre">Ambre</option>
+            <option value="taylor-b">Taylor-B</option>
+            <option value="derek-t">Derek-T</option>
+            <option value="austin-s">Austin-S</option>
+            <option value="kelley-d">Kelley-D</option>
+        </select>
+    </div>
+
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Game</th>
+                <th>Owner</th>
+                <th>Genre</th>
+                <th>Players</th>
+                <th>Complexity</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+            <!-- Dynamic Rows Go Here -->
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
