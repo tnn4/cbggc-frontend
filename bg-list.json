@@ -556,7 +556,7 @@
     "owner": "ambre",
     "game": "in the footsteps of darwin",
     "genre": "grid",
-    "theme": "",
+    "theme": "animals",
     "min-players": 2,
     "max-players": 5,
     "complexity / 5": 1.68,
@@ -2601,19 +2601,19 @@
     "max-players": 4,
     "complexity / 5": 1.43,
     "bgg-id": "https://boardgamegeek.com/boardgame/829/battle-of-the-bands",
-    "bgg-img": ""
+    "bgg-img": "https://cf.geekdo-images.com/1nMrW5iBdZ_mz5K2AHgf8w__itemrep/img/snBEQDfvWtI-XDWfCRKgIr4T7As=/fit-in/246x300/filters:strip_icc()/pic331993.jpg"
   },
   {
     "id": "",
     "owner": "austin-s",
-    "game": "",
+    "game": "valka",
     "genre": "",
     "theme": "",
-    "min-players": "",
-    "max-players": "",
-    "complexity / 5": "",
-    "bgg-id": "",
-    "bgg-img": ""
+    "min-players": 1,
+    "max-players": 5,
+    "complexity / 5": 1.67,
+    "bgg-id": "https://boardgamegeek.com/boardgame/337113/valka",
+    "bgg-img": "https://cf.geekdo-images.com/BzlujJ4VZq3P4Byxn0SdNA__itemrep/img/BRl-yLnOkTq-8hl_OW-IjX4YVL4=/fit-in/246x300/filters:strip_icc()/pic7869242.jpg"
   },
   {
     "id": "",
